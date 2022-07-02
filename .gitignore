@@ -19,6 +19,7 @@ pubspec.lock
 *.ipr
 *.iws
 .idea/
+web
 
 # Visual Studio Code related
 .vscode/
