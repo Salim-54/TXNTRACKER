@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/screens/categories/components/chart_bar.dart';
 
 import '../../widgets/drawer.dart';
 import 'components/date_search.dart';
+import 'components/list_item.dart';
 
 
 class CategoriesScreen extends StatelessWidget {
@@ -36,6 +38,8 @@ class CategoriesScreen extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 10,),
             DateSearchCategories(),
+            Chart(),
+            ListCategory(),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/screens/categories/components/bar.dart';
 
 class Chart extends StatelessWidget {
 
@@ -18,7 +19,11 @@ class Chart extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-
+            Bar(),
+            Bar(),
+            Bar(),
+            Bar(),
+            Bar(),
           ]
         ),
       ),
