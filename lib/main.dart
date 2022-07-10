@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/screens/categories/categories_screen.dart';
+import 'package:flutter_complete_guide/screens/login_screen.dart';
 import 'package:provider/provider.dart';
 
 import './widgets/new_transaction.dart';
@@ -24,8 +26,10 @@ class MyApp extends StatelessWidget {
         // home: LandingPage(),
         routes: {
           LandingPage.routeName: (ctx) => LandingPage(),
+          CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
           AddNewScreen.routeName: (ctx) => AddNewScreen(),
           ExpenseForm.routeName: (ctx) => ExpenseForm(),
+          Login.routeName: (ctx) => Login(),
           AllTransactionScreen.routeName: (ctx) => AllTransactionScreen(),
         },
       ),

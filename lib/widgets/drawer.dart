@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/screens/all_transactions_screen.dart';
+import 'package:flutter_complete_guide/screens/categories/categories_screen.dart';
+import 'package:flutter_complete_guide/screens/login_screen.dart';
 
 import '../screens/new_transaction_screen.dart';
 
@@ -81,6 +83,9 @@ class GeneralDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: (){
+              Navigator.of(context).pushNamed(CategoriesScreen.routeName);
+            },
             horizontalTitleGap: -7,
             leading: Icon(
               Icons.transfer_within_a_station_rounded,
@@ -195,7 +200,7 @@ class GeneralDrawer extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              print('logout');
+              Navigator.of(context).pushNamed(Login.routeName);
             },
             child: Container(
               child: Row(

@@ -9,7 +9,7 @@ import '../widgets/new_transaction.dart';
 import '../providers/transaction_provider.dart';
 
 class LandingPage extends StatefulWidget {
-  static const routeName = '/';
+  static const routeName = '/landing';
 
   @override
   State<LandingPage> createState() => _LandingPageState();
