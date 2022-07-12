@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ListCategory extends StatelessWidget {
+
+  final Color colored;
+  final String category;
+  final String emoji;
+  final int money;
+  ListCategory({this.colored, this.category, this.emoji, this.money});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
@@ -21,9 +28,9 @@ class ListCategory extends StatelessWidget {
         tileColor: Colors.white,
         leading: Container(
           padding: EdgeInsets.all(5),
-          color: Colors.deepOrangeAccent,
+          color: colored,
           child: Text(
-            '🍔',
+            emoji,
             style: TextStyle(
               fontSize: 22,
               color: Colors.white,
@@ -31,7 +38,7 @@ class ListCategory extends StatelessWidget {
           ),
         ),
         title: Text(
-          'Food and Drinks',
+          category,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: 'Quicksand',
@@ -41,11 +48,11 @@ class ListCategory extends StatelessWidget {
         trailing: Container(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: BoxDecoration(
-            color: Colors.deepOrangeAccent,
+            color: colored,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Text(
-            '\$170',
+            '\$${money}',
             style: TextStyle(
               color: Colors.white70,
               fontFamily: 'OpenSans',

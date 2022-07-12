@@ -46,7 +46,7 @@ class Bar extends StatelessWidget {
         height: 15,
       ),
       Container(
-        child: Text('s',
+        child: Text('fd',
           style: TextStyle(
               fontWeight: FontWeight.w900
           ),),

@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/screens/all_expenses_screen.dart';
-import 'package:flutter_complete_guide/widgets/drawer.dart';
-import 'package:flutter_complete_guide/widgets/list_item.dart';
 
-import '../widgets/date_search_bar.dart';
+import '../../widgets/date_search_bar.dart';
+import '../../widgets/drawer.dart';
+import '../../widgets/list_item.dart';
+import '../all_expenses_screen.dart';
 
-class AllTransactionScreen extends StatelessWidget {
-  static const routeName = '/all-transaction';
+class Unexpected extends StatelessWidget {
+  static const routeName = '/unexpected';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: GeneralDrawer(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed(LandingPage.routeName);
+        },
+        child: Icon(
+          Icons.home_rounded,
+          size: 40,
+        ),
+      ),
+
       appBar: AppBar(
         title: Text(
-          'ALL TRANSACTIONS',
+          'UNEXPECTED INCOME',
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
@@ -22,12 +31,6 @@ class AllTransactionScreen extends StatelessWidget {
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.person_pin, size: 35))
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(context).pushNamed(LandingPage.routeName);
-        },
-        child: Icon(Icons.home_rounded,size: 40,),
       ),
       body: Container(
         child: Column(
@@ -73,7 +76,7 @@ class AllTransactionScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      )
     );
   }
 }

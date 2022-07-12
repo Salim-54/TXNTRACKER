@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/screens/all_transactions_screen.dart';
 import 'package:flutter_complete_guide/screens/categories/categories_screen.dart';
 import 'package:flutter_complete_guide/screens/login_screen.dart';
+import 'package:flutter_complete_guide/screens/unexpected/unexpected_screen.dart';
+import 'package:flutter_complete_guide/screens/unexpected_cat/unexpected_cat_screens.dart';
 
 import '../screens/new_transaction_screen.dart';
 
@@ -114,13 +116,16 @@ class GeneralDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: (){
+              Navigator.of(context).pushNamed(Unexpected.routeName);
+            },
             horizontalTitleGap: -7,
             leading: Icon(
-              Icons.attribution_rounded,
+              Icons.view_list_rounded,
               color: Theme.of(context).primaryColor,
             ),
             title: Text(
-              'Debts',
+              'View all unexpected incomes',
               style: TextStyle(
                   color: Theme.of(context).primaryColor,
                   fontWeight: FontWeight.w700),
@@ -132,13 +137,16 @@ class GeneralDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: (){
+              Navigator.of(context).pushNamed(UnexpectedCat.routeName);
+            },
             horizontalTitleGap: -7,
             leading: Icon(
               Icons.upcoming_rounded,
               color: Theme.of(context).primaryColor,
             ),
             title: Text(
-              'Unexpected incomes',
+              'UE income\'s categories',
               style: TextStyle(
                   color: Theme.of(context).primaryColor,
                   fontWeight: FontWeight.w700),

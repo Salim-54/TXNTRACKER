@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_complete_guide/screens/categories/components/chart_bar.dart';
-
+import 'package:flutter_complete_guide/screens/unexpected_cat/components/ue_chart.dart';
 import '../../widgets/drawer.dart';
-import 'components/date_search.dart';
-import 'components/list_item.dart';
+import '../categories/components/date_search.dart';
+import '../categories/components/list_item.dart';
 
-class CategoriesScreen extends StatelessWidget {
-  static const routeName = '/categories';
+class UnexpectedCat extends StatelessWidget {
+  static const routeName = '/unexpected_cat';
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class CategoriesScreen extends StatelessWidget {
       // drawer: GeneralDrawer(),
       appBar: AppBar(
         title: Text(
-          'CATEGORIES',
+          'INCOME CATEGORIES',
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
@@ -38,7 +39,7 @@ class CategoriesScreen extends StatelessWidget {
               height: 10,
             ),
             DateSearchCategories(),
-            Chart(),
+            ChartUE(),
             Container(
               height: 410,
               child: ListView(

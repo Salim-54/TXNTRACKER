@@ -40,6 +40,16 @@ class _LandingPageState extends State<LandingPage> {
       ),
       drawer: GeneralDrawer(),
       appBar: AppBar(
+        leading: Builder(builder: (context) {
+          return IconButton(
+              icon: Icon(
+                Icons.menu_open_rounded,
+                size: 40,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              });
+        }),
         title: Text(
           'EXPENSAPP',
           style: TextStyle(

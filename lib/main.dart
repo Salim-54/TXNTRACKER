@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/screens/categories/categories_screen.dart';
 import 'package:flutter_complete_guide/screens/login_screen.dart';
+import 'package:flutter_complete_guide/screens/unexpected/unexpected_screen.dart';
+import 'package:flutter_complete_guide/screens/unexpected_cat/unexpected_cat_screens.dart';
 import 'package:provider/provider.dart';
 
 import './widgets/new_transaction.dart';
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
           AddNewScreen.routeName: (ctx) => AddNewScreen(),
           ExpenseForm.routeName: (ctx) => ExpenseForm(),
           Login.routeName: (ctx) => Login(),
+          Unexpected.routeName: (ctx) => Unexpected(),
+          UnexpectedCat.routeName: (ctx) => UnexpectedCat(),
           AllTransactionScreen.routeName: (ctx) => AllTransactionScreen(),
         },
       ),
