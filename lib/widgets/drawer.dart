@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/screens/all_transactions_screen.dart';
 import 'package:flutter_complete_guide/screens/categories/categories_screen.dart';
 import 'package:flutter_complete_guide/screens/login_screen.dart';
+import 'package:flutter_complete_guide/screens/report/report_screen.dart';
+import 'package:flutter_complete_guide/screens/settings/setting_screen.dart';
 import 'package:flutter_complete_guide/screens/unexpected/unexpected_screen.dart';
 import 'package:flutter_complete_guide/screens/unexpected_cat/unexpected_cat_screens.dart';
 
@@ -168,6 +170,9 @@ class GeneralDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: (){
+              Navigator.of(context).pushNamed(ReportScreen.routeName);
+            },
             horizontalTitleGap: -7,
             leading: Icon(
               Icons.description_rounded,
@@ -186,6 +191,9 @@ class GeneralDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: (){
+              Navigator.of(context).pushNamed(SettingScreen.routeName);
+            },
             horizontalTitleGap: -7,
             leading: Icon(
               Icons.settings_applications_rounded,
